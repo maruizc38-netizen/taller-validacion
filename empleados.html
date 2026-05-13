@@ -1,0 +1,45 @@
+Crear un formulario usando clases en JavaScript para registrar empleados.
+Solicitar:
+● Nombre
+● Cargo
+● Salario
+● Horas extras
+Calcular:
+● Salario total
+Validar:
+● Salario mayor a 0
+● Horas extras válidas
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class=" contenedor">
+        <h2>registro de empleados </h2>
+        <form id="registro_empleado">
+            <label>nombre empleado</label>
+            <input type="text" id="nombre" name="nombre" placeholder="nombre empleado" required><br><br>
+            <div id=errornombre class="error"></div>
+            <label>cargo</label>
+            <input type="text" id="cargo" name="cargo" placeholder="cargo" required><br><br>
+            <div id=errorcargo class="error"></div>
+            <label>salario</label>
+            <input type="number" id="salario" name="salario" placeholder="salario" required><br><br>
+            <div id=errorsalario class="error"></div>
+            <label>horas extras</label>
+            <input type="number" id="horas_extras" name="horas_extras" placeholder="horas extras" required><br><br>
+            <div id=errorhoras_extras class="error"></div>
+            <button type="submit">registrar</button>
+        </form>
+        <div id="mensaje"></div>
+        <div id="salario_total"></div>
+    </div>
+    <script src="empleados.js"></script>
+</body>
+
+</html>

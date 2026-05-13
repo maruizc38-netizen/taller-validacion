@@ -1,0 +1,44 @@
+/*Un restaurante necesita un formulario de reservas.
+Solicitar:
+● Nombre
+● Número de personas
+● Fecha
+● Hora
+Validar:
+● Campos obligatorios
+● Número de personas mayor a 0
+Mostrar:
+● Reserva registrada correctamente*/
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class=" contenedor">
+        <h2>reservas restaurante </h2>
+        <form id="reserva">
+            <label>nombre de la reserva</label>
+            <input type="text" id="nombre" name="nombre" placeholder="nombre" required><br><br>
+            <div id="errornombre" class="error"></div>
+            <label>numero de personas</label>
+            <input type="number" id="personas" name="personas" placeholder="cantidad de personas" required><br><br>
+            <div id="errorpersonas" class="error"></div>
+            <label>Fecha</label>
+            <input type="date" id="fecha" name="fecha" placeholder="Fecha" required><br><br>
+            <div id="errorfecha" class="error"></div>
+            <label>Hora</label>
+            <input type="time" id="hora" name="hora" placeholder="hora" required><br><br>
+            <div id="errorhora" class="error"></div>
+            <button type="submit">registrar</button>
+        </form>
+        <div id="mensaje"></div>
+    </div>
+    <script src="restaurante.js"></script>
+</body>
+
+</html>
