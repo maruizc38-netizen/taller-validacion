@@ -50,7 +50,30 @@ class validarform{
 //evento del formulario
 document.getElementById("registro_notas").addEventListener("submit", function (e){
     e.preventDefault();
-
+    let nombre = document.getElementById("nombre").value;
+    let nota1 = document.getElementById("nota1").value;
+    let nota2 = document.getElementById("nota2").value;
+    let nota3 = document.getElementById("nota3").value;
+    let formulario = new validarform(nombre,nota1,nota2,nota3);
+    let error_nombre = formulario.validarnombre();
+    let error_nota1 = formulario.validarnota(nota1);
+    let error_nota2 = formulario.validarnota(nota2);
+    let error_nota3 = formulario.validarnota(nota3);
+    if(error_nombre || error_nota1 || error_nota2 || error_nota3){
+        document.getElementById("error_nombre").innerText = error_nombre;
+        document.getElementById("error_nota1").innerText = error_nota1;
+        document.getElementById("error_nota2").innerText = error_nota2;
+        document.getElementById("error_nota3").innerText = error_nota3;
+    }
+    else{
+        document.getElementById("error_nombre").innerText = "";
+        document.getElementById("error_nota1").innerText = "";
+        document.getElementById("error_nota2").innerText = "";
+        document.getElementById("error_nota3").innerText = "";
+        let resultado = formulario.mostrar_resultado();
+        document.getElementById("resultado").innerText = resultado;
+    }
+});
 
 
 
